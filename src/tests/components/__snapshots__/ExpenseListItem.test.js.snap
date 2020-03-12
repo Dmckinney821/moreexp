@@ -2,7 +2,6 @@
 
 exports[`should render ExpenseList with expensies 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExpenseListItem
     amount={195}
@@ -13,8 +12,10 @@ ShallowWrapper {
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -24,17 +25,17 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Link
+        <Unknown
           to="/edit/1"
 >
           <h3>
                     Gum
           </h3>
-</Link>,
+</Unknown>,
         <p>
-          195
+          $1.95
           -
-          0
+          December 31st 1969
 </p>,
       ],
     },
@@ -62,7 +63,18 @@ ShallowWrapper {
           "rendered": "Gum",
           "type": "h3",
         },
-        "type": [Function],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "Link",
+          "propTypes": Object {
+            "innerRef": [Function],
+            "onClick": [Function],
+            "replace": [Function],
+            "target": [Function],
+            "to": [Function],
+          },
+          "render": [Function],
+        },
       },
       Object {
         "instance": null,
@@ -70,16 +82,16 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            195,
+            "$1.95",
             "-",
-            0,
+            "December 31st 1969",
           ],
         },
         "ref": null,
         "rendered": Array [
-          195,
+          "$1.95",
           "-",
-          0,
+          "December 31st 1969",
         ],
         "type": "p",
       },
@@ -93,17 +105,17 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Link
+          <Unknown
             to="/edit/1"
 >
             <h3>
                         Gum
             </h3>
-</Link>,
+</Unknown>,
           <p>
-            195
+            $1.95
             -
-            0
+            December 31st 1969
 </p>,
         ],
       },
@@ -131,7 +143,18 @@ ShallowWrapper {
             "rendered": "Gum",
             "type": "h3",
           },
-          "type": [Function],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "Link",
+            "propTypes": Object {
+              "innerRef": [Function],
+              "onClick": [Function],
+              "replace": [Function],
+              "target": [Function],
+              "to": [Function],
+            },
+            "render": [Function],
+          },
         },
         Object {
           "instance": null,
@@ -139,16 +162,16 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              195,
+              "$1.95",
               "-",
-              0,
+              "December 31st 1969",
             ],
           },
           "ref": null,
           "rendered": Array [
-            195,
+            "$1.95",
             "-",
-            0,
+            "December 31st 1969",
           ],
           "type": "p",
         },
@@ -160,8 +183,27 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
+    Symbol(enzyme.__providerValues__): undefined,
   },
+  Symbol(enzyme.__providerValues__): Map {},
 }
 `;
