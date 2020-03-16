@@ -1,5 +1,4 @@
 import * as firebase from 'firebase';
-
 const firebaseConfig = {
     apiKey: "AIzaSyCzBVqGDnFK2lQ8ayJgAzP0eiI_fLHlk4s",
     authDomain: "expensify-b9e5d.firebaseapp.com",
@@ -15,11 +14,68 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
- 
-database.ref().on('value', (snapshot) => {
-    const val = snapshot.val();
-    console.log(`${val.name} is a ${val.job.title} at ${val.job.company}`)
-})
+export { firebase, database as default };
+
+
+
+
+
+
+
+// const database = firebase.database();
+// database.ref('expenses').on('child_removed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val())
+// })
+
+// database.ref('expenses').on('child_changed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val())
+// })
+
+// database.ref('expenses').on('child_added', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val())
+// })
+// database.ref('expenses')
+//     .once('value')
+//     .then((snapshot) => {
+//         const expenses = [];
+
+//         snapshot.forEach((childSnapshot) => {
+//             expenses.push({
+//                 id: childSnapshot.key,
+//                 ...childSnapshot.val()
+//             })
+//         })
+//         console.log(expenses);
+//     })
+
+// database.ref('expenses').on('value', (snapshot) => {
+//     const expenses = [];
+
+//     snapshot.forEach((childSnapshot) => {
+//         expenses.push({
+//             id: childSnapshot.key,
+//             ...childSnapshot.val()
+//             })
+//         })
+//         console.log(expenses);
+// })
+
+// database.ref('expenses').push({
+//     decription: 'legacy',
+//     note: 'have it',
+//     amount: 1000000,
+//     createdAt: 5000
+// })
+
+// database.ref('nopes').push({
+//     title: 'course topics',
+//     body: 'react and python'
+// });
+
+// database.ref().on('value', (snapshot) => {
+//     const val = snapshot.val();
+//     console.log(`${val.name} is a ${val.job.title} at ${val.job.company}`)
+// })
 // database.ref('location/city')
 //     .once('value')
 //     .then((snapshot) => {
